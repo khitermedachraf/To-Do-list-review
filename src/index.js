@@ -43,9 +43,11 @@ todoContainer.addEventListener('click', (e) => {
     userTask.focus();
     // Iterate throw list items to setback the initial background color
     const allLi = todoContainer.childNodes;
-    for (let i = 0; i < allLi.length; i++) {
-      allLi[i].style.backgroundColor = 'lightcyan';
-    }
+
+    allLi.forEach((li) => {
+      li.style.backgroundColor = 'lightcyan';
+    });
+
     // set the background color of the focuced list item
     e.target.parentElement.parentElement.style.backgroundColor = 'lightyellow';
     userTask.value = e.target.textContent;
