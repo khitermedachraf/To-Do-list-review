@@ -75,4 +75,11 @@ export default class Actions {
     Actions.displayTasks(todoTasks);
     userTask.value = '';
   };
+
+  // create function torefresh the browser and clear all taskes:
+  static clearAll = () => {
+    todoTasks.splice(0, todoTasks.length);
+    LocalStorage.set(todoTasks);
+    this.displayTasks(todoTasks);
+  }
 }

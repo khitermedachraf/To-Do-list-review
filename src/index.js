@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 import './style.css';
 import {
-  todoTasks, todoContainer, userTask,
+  todoTasks, todoContainer, userTask, refreshBtn,
 } from './modules/variables.js';
 import Actions from './modules/actions.js';
 import Task from './modules/task.js';
@@ -61,3 +61,8 @@ TaskStatus.toggleCompleted();
 
 // delete all completed task
 TaskStatus.deleteAllCompleted();
+
+// refresh the browser and clear all taskes:
+refreshBtn.addEventListener('click', () => {
+  Actions.clearAll();
+});
